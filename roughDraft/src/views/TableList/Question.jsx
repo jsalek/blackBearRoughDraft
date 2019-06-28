@@ -11,7 +11,8 @@ import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Button from '@material-ui/core/Button';
-import Question from './Question';
+import { bgcolor } from "@material-ui/system";
+
 const styles = {
   cardCategoryWhite: {
     "&,& a,& a:hover,& a:focus": {
@@ -42,39 +43,57 @@ const styles = {
   }
 };
 
-function TableList(props) {
-  const { classes } = props;
+class Question extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      correct: false,
+      bgcolor: "blue",
+      id: null,
+      changecol: false
+    }
+  }
+  checkAnswer(t,a){
+      if(t==a){
+        console.log("correct");
+        
+        this.setState({correct:true, bgcolor:"green", id: t});
+        
+      }
+  }
+  render(){
+  
   const title="Macro Economics Class"
   const questions = [["question 1", "a", "b", "c", "d", "a"],["question 2", "a", "b", "c", "d", "b"]]
-  const q="question"
-  const a="answer"
-  const question=["question", ["answer1", "answer2", "answer3"], "answer1"]
+  
+  
+
   return (
-    <div>
         <Card>
           <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>{title}</h4>
-            <p className={classes.cardCategoryWhite}>
-              Here is a subtitle for this table
+            <h4 className={this.props.classes.cardTitleWhite}>{this.props.question[0]}</h4>
+            <p className={this.props.classes.cardCategoryWhite}>
             </p>
             
           </CardHeader>
           <CardBody>
-          {questions
+          { this.props.question[1]
           .map(t => 
             <div>
-              
-            
+              <br/>
+            <Button style={{backgroundColor: (this.state.correct && this.state.id== t) ?
+            "green": "#00ACC0"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
+            <br/>
+        
+          
             </div>)}
           </CardBody>
         </Card>
-        <Question question={question}/>
-        </div>
   );
 }
-
-TableList.propTypes = {
+}
+Question.propTypes = {
   classes: PropTypes.object
 };
 
-export default withStyles(styles)(TableList);
+export default withStyles(styles)(Question);
