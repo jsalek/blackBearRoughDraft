@@ -43,24 +43,24 @@ class FixedPlugin extends Component {
                 <div>
                   <span
                     className={
-                      this.props.bgColor === "purple"
-                        ? "badge filter badge-purple active"
-                        : "badge filter badge-purple"
+                      this.props.bgColor === "blue" 
+                        ? "badge filter badge-blue active"
+                        : "badge filter badge-blue"
                     }
                     data-color="purple"
                     onClick={() => {
-                      this.props.handleColorClick("purple");
+                      this.props.handleColorClick("blue");
                     }}
                   />
                   <span
                     className={
-                      this.props.bgColor === "blue"
-                        ? "badge filter badge-blue active"
-                        : "badge filter badge-blue"
+                      this.props.bgColor === "purple"
+                        ? "badge filter badge-purple active"
+                        : "badge filter badge-purple"
                     }
                     data-color="blue"
                     onClick={() => {
-                      this.props.handleColorClick("blue");
+                      this.props.handleColorClick("purple");
                     }}
                   />
                   <span
@@ -145,41 +145,7 @@ class FixedPlugin extends Component {
               </a>
             </li>
 
-            <li className="button-container">
-              <div className="button-container">
-                <Button
-                  color="success"
-                  href="https://www.creative-tim.com/product/material-dashboard-react?ref=mdr-fixed-plugin"
-                  target="_blank"
-                  fullWidth
-                >
-                  Download free!
-                </Button>
-              </div>
-            </li>
-            <li className="button-container">
-              <div className="button-container">
-                <Button
-                  color="warning"
-                  href="https://www.creative-tim.com/product/material-dashboard-pro-react?ref=mdr-fixed-plugin"
-                  target="_blank"
-                  fullWidth
-                >
-                  Get PRO version
-                </Button>
-              </div>
-            </li>
-            <li className="button-container">
-              <Button
-                color="info"
-                fullWidth
-                href="https://demos.creative-tim.com/material-dashboard-react/#/documentation/tutorial?ref=mdr-fixed-plugin"
-                target="_blank"
-              >
-                Documentation
-              </Button>
-            </li>
-            <li className="adjustments-line" />
+            
           </ul>
         </div>
       </div>

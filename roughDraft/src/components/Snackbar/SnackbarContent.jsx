@@ -34,6 +34,7 @@ function SnackbarContent({ ...props }) {
         <div>
           {icon !== undefined ? <props.icon className={classes.icon} /> : null}
           <span className={messageClasses}>{message}</span>
+          
         </div>
       }
       classes={{
