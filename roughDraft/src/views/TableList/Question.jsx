@@ -71,6 +71,7 @@ class Question extends React.Component {
   return (
         <Card>
           <CardHeader color="primary">
+            
             <h4 className={this.props.classes.cardTitleWhite}>{this.props.question[0]}</h4>
             {/* <p className={this.props.classes.cardCategoryWhite}>
               {this.props.question}
@@ -78,15 +79,22 @@ class Question extends React.Component {
             
           </CardHeader>
           <CardBody>
+        
           { this.props.question[1]
           .map(t => 
             <div>
               <br/>
+              <div style={{display: "inline-block"}}>
             <Button style={{backgroundColor: (this.state.id== t) ?
             this.state.bgColor: "#c3afc7"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
+            {/* <h4>{this.state.output}</h4> */}
+                <img style={{display: (this.state.id== t && this.state.correct) ?
+                "block": "none"}}
+                src="TableList/check.jpg" alt="Check"></img>
+            </div>
             <br/>
             </div>)}
-            {this.state.output}
+        
           </CardBody>
         </Card>
   );
