@@ -139,9 +139,9 @@ function TypographyPage(props) {
   <Card>
 
     <CardHeader color="primary">
-      <h4 className={classes.cardTitleWhite}>Microeconomcis</h4>
+      <h4 className={classes.cardTitleWhite}>BlackRock</h4>
       <p className={classes.cardCategoryWhite}>
-        Learn about Microeconomics
+        Learn about BlackRock
       </p>
     </CardHeader>
     <CardBody>
@@ -150,8 +150,9 @@ function TypographyPage(props) {
         <Link style={{color:"#00ACC0"}} to={{
         pathname: '/admin/table',
         state: {
-          questions: [["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]],
-          title: "Micro"
+          
+          questions: [['1) What is Blackrock?', ['a) A multinational investment bank and financial services corporation.', 'b) The world’s largest tax preparation company.', "c) A global investment management corporation and the world's largest asset manager."], "c) A global investment management corporation and the world's largest asset manager."], ["2) What is Aladdin?", ["a) A lovable street urchin who meets Princess Jasmine, the beautiful daughter of the Sultan of Agrabah. While visiting her exotic palace, Aladdin stumbles upon a magic oil lamp that unleashes a powerful, wisecracking, larger-than-life genie..", "b) An electronic system by BlackRock Solutions, the risk management division of the largest investment management corporation, BlackRock, Inc.", "c) The aggregation of buyers and sellers of stocks, which represent ownership claims on businesses."], "b) An electronic system by BlackRock Solutions, the risk management division of the largest investment management corporation, BlackRock, Inc."], ["3) How much money does BlackRock manage as of April 2019?", ["a) $21 trillion.", "b) $6.5 trillion.", "c) $3.5 trillion."], "b) $6.5 trillion."], ["4) How much money does Aladdin manage as of April 2019?", ["a) Over $21 trillion.", "b) Over $6.5 trillion.", "c) Over $1 billion."], "a) Over $21 trillion."], ["5) What are the types of clients BlackRock work with?", ["a) Individuals.", "b) Corporations.", "c) Government.", "d) All of the above."], "d) All of the above."]],
+          title: "BlackRock"
         }
       }}>Get Started</Link>
       </span>

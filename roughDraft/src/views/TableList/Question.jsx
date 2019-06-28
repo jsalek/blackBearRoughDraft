@@ -58,7 +58,8 @@ class Question extends React.Component {
   }
   checkAnswer(t,a){
     console.log(this.state.attempt);
-    if (t == a && this.state.attempt) {
+    if (!this.state.attempt){return;}
+    if (t == a) {
       this.setState({
         correct: true,
         bgColor: "#bbf2d0",
@@ -83,10 +84,6 @@ class Question extends React.Component {
           <h4 className={this.props.classes.cardTitleWhite}>
             {this.props.question[0]}
           </h4>
-            {/* <p className={this.props.classes.cardCategoryWhite}>
-              {this.props.question}
-            </p> */}
-            
           </CardHeader>
           <CardBody>
         
@@ -95,7 +92,7 @@ class Question extends React.Component {
             <div>
               <br/>
               <div style={{display: "inline-block"}}>
-            <Button style={{backgroundColor: (this.state.id== t) ?
+            <Button style={{backgroundColor: (this.state.id== t && !this.state.attempt) ?
             this.state.bgColor: "white"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
 
                  <img style={{visibility: (this.state.id== t && this.state.correct) ?
