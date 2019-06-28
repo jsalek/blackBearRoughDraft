@@ -81,7 +81,7 @@ render(){
         <Card>
         
           <CardHeader color="primary">
-            <h4 className={this.props.classes.cardTitleWhite}>Your score on {this.props.location.state.title}: {this.state.score/10*100} % </h4>
+            <h4 className={this.props.classes.cardTitleWhite}>Your score on {this.props.location.state.title}: {this.state.score/5*100} % </h4>
             <p className={this.props.classes.cardCategoryWhite}>
             </p>
             

@@ -130,7 +130,7 @@ class Dashboard extends React.Component {
                   tabIcon: Checkbox,
                   tabContent: (
                     <Tasks
-                      checkedIndexes={[0, 3]}
+                      checkedIndexes={[0, 1]}
                       tasksIndexes={[0, 1]}
                       tasks={daily}
                     />

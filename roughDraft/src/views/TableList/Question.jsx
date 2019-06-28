@@ -12,6 +12,8 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Button from '@material-ui/core/Button';
 import { bgcolor } from "@material-ui/system";
+import imagine2 from "assets/img/check.jpg";
+import imagine3 from "assets/img/x.jpg";
 
 const styles = {
   cardCategoryWhite: {
@@ -78,9 +80,9 @@ class Question extends React.Component {
   return (
         <Card>
           <CardHeader color="primary">
-            
-            <h4 className={this.props.classes.cardTitleWhite}>{this.props.question[0]}</h4>
-
+          <h4 className={this.props.classes.cardTitleWhite}>
+            {this.props.question[0]}
+          </h4>
             {/* <p className={this.props.classes.cardCategoryWhite}>
               {this.props.question}
             </p> */}
@@ -95,10 +97,12 @@ class Question extends React.Component {
               <div style={{display: "inline-block"}}>
             <Button style={{backgroundColor: (this.state.id== t) ?
             this.state.bgColor: "white"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
-            {/* <h4>{this.state.output}</h4> */}
-                <img style={{display: (this.state.id== t && this.state.correct) ?
-                "block": "none"}}
-                src="TableList/check.jpg" alt="Check"></img>
+
+                 <img style={{visibility: (this.state.id== t && this.state.correct) ?
+                "": "hidden"}} src={imagine2} width='10' height='10'alt="Check"></img>
+                 <img style={{visibility: (this.state.id== t && !this.state.correct) ?
+                "": "hidden"}} src={imagine3} width='20' height='20'alt="Check"></img>
+                
             </div>
             <br/>
             </div>)}

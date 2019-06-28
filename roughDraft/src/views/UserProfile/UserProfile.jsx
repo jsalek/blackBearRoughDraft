@@ -14,7 +14,7 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardAvatar from "components/Card/CardAvatar.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
-
+import { Link } from 'react-router-dom';
 import avatar from "assets/img/faces/marc.jpg";
 
 const styles = {
@@ -147,7 +147,13 @@ function UserProfile(props) {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Button color="#9c27b0">Update Pofile</Button>
+              {/* <Button color="#9c27b0">Update Pofile</Button> */}
+              <span className="input-group-btn">
+                  <Link style={{color:"#9c27b0"}} to={{
+                  pathname: '/admin/dashboard',
+                  
+        }}>Update Profile</Link>
+        </span>
             </CardFooter>
           </Card>
         </GridItem>

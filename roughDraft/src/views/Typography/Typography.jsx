@@ -14,7 +14,7 @@ import Danger from "components/Typography/Danger.jsx";
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const style = {
   typo: {
@@ -88,9 +88,9 @@ function TypographyPage(props) {
 
     <Card>
       <CardHeader color="primary">
-        <h4 className={classes.cardTitleWhite}>Macroeconomics</h4>
+        <h4 className={classes.cardTitleWhite}>Financial Goals</h4>
         <p className={classes.cardCategoryWhite}>
-          Learn about Macroeconomics
+          Learn about Financial Goals...
         </p>
       </CardHeader>
       <CardBody>
@@ -99,8 +99,18 @@ function TypographyPage(props) {
           <Link style={{color:"#00ACC0"}} to={{
           pathname: '/admin/table',
           state: {
-            questions: [["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]],
-            title: "Macroeconmics"
+            questions: [["What is a financial plan?", ['a) A comprehensive evaluation of current and future financial sate',
+             'b) A portfolio of your stocks', 'c) An income statement', 'd) Rental income and capital appreciation'], "a) A comprehensive evaluation of current and future financial sate"],
+             ["What types of investments have the highest annualized return over long time periods, but also higher volatility?",
+              ['a) Bonds', 'b) Stocks', 'c) Commodities', 'd) Real estate'], "b) Stocks"],
+              ["What is a bond?", ['a) A bond is a debt investment representing a portion of a loan',
+            'b) A bond is a basic good used in commerce', 'c) A bond is a property consisting of land or buildings'], 'a) A bond is a debt investment representing a portion of a loan'],
+            ['What are the returns of bonds based on?', ['a) capital appreciation and dividends', 'b) capital appreciation and interest income',
+          'c) Appreciation only', 'd) Rental income and capital appreciation'], 'b) capital appreciation and interest income'],
+          ['What are the returns on commodities based on?', ['a) Capital appreciation and dividends', 'b) Capital appreciation and interest income', 
+          'c) Appreciation only', 'd) Rental income and capital appreciation'], 'c) Appreciation only']
+            ],
+            title: "Financial Goals"
           }
         }}>Get Started</Link>
         </span>
@@ -108,7 +118,7 @@ function TypographyPage(props) {
     </Card>
     <Card>
     <CardHeader color="primary">
-      <h4 className={classes.cardTitleWhite}>Personal Finacne</h4>
+      <h4 className={classes.cardTitleWhite}>Personal Finance</h4>
       <p className={classes.cardCategoryWhite}>
         Learn about Personal Finance
       </p>
@@ -120,7 +130,7 @@ function TypographyPage(props) {
         pathname: '/admin/table',
         state: {
           questions: [["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]],
-          title: "Personal Finacne"
+          title: "Personal Finance"
         }
       }}>Get Started</Link>
       </span>
