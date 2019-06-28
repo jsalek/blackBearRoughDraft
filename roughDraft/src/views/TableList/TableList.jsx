@@ -44,15 +44,15 @@ const styles = {
 
 function TableList(props) {
   const { classes } = props;
-  const title="Macro Economics Class"
+  // const title="Macro Economics Class"
 
-  const question=["question", ['answer1', 'answer2', 'answer3'], "answer1"]
-  const questions=[["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]]
+  // const question=["question", ['answer1', 'answer2', 'answer3'], "answer1"]
+  // const questions=[["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]]
   return (
     <div>
         <Card>
           <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>{title}</h4>
+            <h4 className={classes.cardTitleWhite}>{props.location.state.title}</h4>
             <p className={classes.cardCategoryWhite}>
               Here is a subtitle for this table
               
@@ -60,7 +60,7 @@ function TableList(props) {
             
           </CardHeader>
           <CardBody>
-          {questions
+          { props.location.state.questions
           .map(t => 
             <div>
               <Question question={t}/>
@@ -68,7 +68,6 @@ function TableList(props) {
             </div>)}
           </CardBody>
         </Card>
-        <Question question={question}/>
         </div>
   );
 }

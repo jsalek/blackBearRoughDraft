@@ -62,12 +62,6 @@ class Question extends React.Component {
       }
   }
   render(){
-  
-  const title="Macro Economics Class"
-  const questions = [["question 1", "a", "b", "c", "d", "a"],["question 2", "a", "b", "c", "d", "b"]]
-  
-  
-
   return (
         <Card>
           <CardHeader color="primary">
