@@ -40,6 +40,7 @@ import {
 } from "variables/charts.jsx";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
+import { Checkbox } from "@material-ui/core";
 
 class Dashboard extends React.Component {
   state = {
@@ -142,19 +143,19 @@ class Dashboard extends React.Component {
               headerColor="primary"
               tabs={[
                 {
-                  tabName: "Bugs",
-                  tabIcon: BugReport,
+                  tabName: "Daily",
+                  tabIcon: Checkbox,
                   tabContent: (
                     <Tasks
                       checkedIndexes={[0, 3]}
-                      tasksIndexes={[0, 1, 2, 3]}
+                      tasksIndexes={[0, 1]}
                       tasks={bugs}
                     />
                   )
                 },
                 {
-                  tabName: "Website",
-                  tabIcon: Code,
+                  tabName: "Weekly",
+                  tabIcon: Checkbox,
                   tabContent: (
                     <Tasks
                       checkedIndexes={[0]}
@@ -164,8 +165,8 @@ class Dashboard extends React.Component {
                   )
                 },
                 {
-                  tabName: "Server",
-                  tabIcon: Cloud,
+                  tabName: "Yearly",
+                  tabIcon: Checkbox,
                   tabContent: (
                     <Tasks
                       checkedIndexes={[1]}
@@ -180,9 +181,9 @@ class Dashboard extends React.Component {
           <GridItem xs={12} sm={12} md={6}>
             <Card>
               <CardHeader color="warning">
-                <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
+                <h4 className={classes.cardTitleWhite}>Most Missed Questions</h4>
                 <p className={classes.cardCategoryWhite}>
-                  New employees on 15th September, 2016
+                  Most missed this week
                 </p>
               </CardHeader>
               <CardBody>
@@ -190,9 +191,10 @@ class Dashboard extends React.Component {
                   tableHeaderColor="warning"
                   tableHead={["Rank", "Question", "Correct Answer", "Your Answer"]}
                   tableData={[
-                    ["1", "What is an ETF?", "$36,738", "Niger"],
-                    ["2", "What is AUM?", "$23,789", "Curaçao"],
-                    ["3", "What is a put option?", "$56,142", "Netherlands"],
+                    ["1", "What is an ETF?", "Exchange Traded Fund", "iShares"],
+                    ["2", "What is AUM?", "Assets Under Management", "Australian Money"],
+                    ["3", "What is a put option?", "A stock market device which gives the owner of a put the right, but not the obligation, to sell an asset, at a specified price, by a predetermined date to a given party", 
+                    "Gives the owner the right, but not an obligation, to buy at a specified date."],
                     ["4", "Can I get a return offer?", "Maybe", "Yes"]
                   ]}
                 />
