@@ -52,27 +52,40 @@ class Question extends React.Component {
       id: null,
       attempt: true,
       outpt: ""
-      
-    }
+    };
   }
   checkAnswer(t,a){
-      console.log(this.state.attempt)
-      if(t==a && this.state.attempt){
-        
-        this.setState({correct:true, bgColor:"green", id: t, output: "CORRECT", attempt:false});
+    console.log(this.state.attempt);
+    if (t == a && this.state.attempt) {
+      this.setState({
+        correct: true,
+        bgColor: "green",
+        id: t,
+        output: "CORRECT",
+        attempt: false
+      });
         this.props.action();
-        
-      }
-      else{
-      this.setState({attempt: false, output: "INCORRECT", bgColor: "#e34653", id:t});
+    } else {
+      this.setState({
+        attempt: false,
+        output: "INCORRECT",
+        bgColor: "#e34653",
+        id: t
+      });
       }
   }
   render(){
   return (
         <Card>
           <CardHeader color="primary">
+<<<<<<< HEAD
             
             <h4 className={this.props.classes.cardTitleWhite}>{this.props.question[0]}</h4>
+=======
+          <h4 className={this.props.classes.cardTitleWhite}>
+            {this.props.question[0]}
+          </h4>
+>>>>>>> bc7c115f233f10facea6f864a4e883c1d6934fc3
             {/* <p className={this.props.classes.cardCategoryWhite}>
               {this.props.question}
             </p> */}
