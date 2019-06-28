@@ -73,6 +73,7 @@ class Question extends React.Component {
           <CardHeader color="primary">
             <h4 className={this.props.classes.cardTitleWhite}>{this.props.question[0]}</h4>
             <p className={this.props.classes.cardCategoryWhite}>
+              {this.props.question}
             </p>
             
           </CardHeader>

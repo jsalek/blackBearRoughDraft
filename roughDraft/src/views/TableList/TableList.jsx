@@ -45,10 +45,9 @@ const styles = {
 function TableList(props) {
   const { classes } = props;
   const title="Macro Economics Class"
-  const questions = [["question 1", "a", "b", "c", "d", "a"],["question 2", "a", "b", "c", "d", "b"]]
-  const q="question"
-  const a="answer"
-  const question=["question", ["answer1", "answer2", "answer3"], "answer1"]
+
+  const question=["question", ['answer1', 'answer2', 'answer3'], "answer1"]
+  const questions=[["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]]
   return (
     <div>
         <Card>
@@ -56,6 +55,7 @@ function TableList(props) {
             <h4 className={classes.cardTitleWhite}>{title}</h4>
             <p className={classes.cardCategoryWhite}>
               Here is a subtitle for this table
+              
             </p>
             
           </CardHeader>
@@ -63,7 +63,7 @@ function TableList(props) {
           {questions
           .map(t => 
             <div>
-              
+              <Question question={t}/>
             
             </div>)}
           </CardBody>
