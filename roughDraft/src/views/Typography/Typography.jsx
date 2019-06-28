@@ -67,7 +67,7 @@ function TypographyPage(props) {
       <CardBody>
       
         <span className="input-group-btn">
-          <Link to={{
+          <Link style={{color:"#00ACC0"}} to={{
           pathname: '/admin/table',
           state: {
             questions: [["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]],
@@ -87,7 +87,7 @@ function TypographyPage(props) {
     <CardBody>
     
       <span className="input-group-btn">
-        <Link to={{
+        <Link style={{color:"#00ACC0"}} to={{
         pathname: '/admin/table',
         state: {
           questions: [["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]],
@@ -98,6 +98,7 @@ function TypographyPage(props) {
     </CardBody>
   </Card>
   <Card>
+    
     <CardHeader color="primary">
       <h4 className={classes.cardTitleWhite}>Microeconomcis</h4>
       <p className={classes.cardCategoryWhite}>
@@ -107,7 +108,7 @@ function TypographyPage(props) {
     <CardBody>
     
       <span className="input-group-btn">
-        <Link to={{
+        <Link style={{color:"#00ACC0"}} to={{
         pathname: '/admin/table',
         state: {
           questions: [["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]],

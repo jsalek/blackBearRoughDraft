@@ -5514,8 +5514,8 @@ footer .btn {
 }
 
 .card [data-background-color="purple"] {
-  background: linear-gradient(60deg, #ab47bc, #8e24aa);
-  box-shadow: 0 12px 20px -10px rgba(156, 39, 176, 0.28),
+  background: linear-gradient(60deg, #FFFFFF, #ffa21a);
+  box-shadow: 0 12px 20px -10px rgba(78, 151, 56, 0.28),
     0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2);
 }
 
