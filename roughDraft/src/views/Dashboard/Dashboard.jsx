@@ -31,7 +31,7 @@ import CardIcon from "components/Card/CardIcon.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 
-import { bugs, website, server } from "variables/general.jsx";
+import { daily, weekly, yearly } from "variables/general.jsx";
 
 import {
   dailySalesChart,
@@ -58,7 +58,6 @@ class Dashboard extends React.Component {
     return (
       <div>
         <GridContainer>
-          
         </GridContainer>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
@@ -149,7 +148,7 @@ class Dashboard extends React.Component {
                     <Tasks
                       checkedIndexes={[0, 3]}
                       tasksIndexes={[0, 1]}
-                      tasks={bugs}
+                      tasks={daily}
                     />
                   )
                 },
@@ -160,7 +159,7 @@ class Dashboard extends React.Component {
                     <Tasks
                       checkedIndexes={[0]}
                       tasksIndexes={[0, 1]}
-                      tasks={website}
+                      tasks={weekly}
                     />
                   )
                 },
@@ -171,7 +170,7 @@ class Dashboard extends React.Component {
                     <Tasks
                       checkedIndexes={[1]}
                       tasksIndexes={[0, 1, 2]}
-                      tasks={server}
+                      tasks={yearly}
                     />
                   )
                 }
