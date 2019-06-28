@@ -44,6 +44,8 @@ const Sidebar = ({ ...props }) => {
         return (
           <div>
           <NavLink
+          style={{visibility: (prop.name== "Course Questions") ?
+          "hidden": "visible"}}
             to={prop.layout + prop.path}
             className={activePro + classes.item}
             activeClassName="active"
@@ -51,7 +53,8 @@ const Sidebar = ({ ...props }) => {
           >
             <ListItem button className={classes.itemLink + listItemClasses}>
               {typeof prop.icon === "string" ? (
-                <Icon
+                <Icon style={{visibility: (prop.name== "Course Questions") ?
+                "hidden": "visible"}}
                   className={classNames(classes.itemIcon, whiteFontClasses, {
                     [classes.itemIconRTL]: props.rtlActive
                   })}
@@ -60,12 +63,16 @@ const Sidebar = ({ ...props }) => {
                 </Icon>
               ) : (
                 <prop.icon
+                style={{visibility: (prop.name== "Course Questions") ?
+                  "hidden": "visible"}}
                   className={classNames(classes.itemIcon, whiteFontClasses, {
                     [classes.itemIconRTL]: props.rtlActive
                   })}
                 />
               )}
               <ListItemText
+                style={{visibility: (prop.name== "Course Questions") ?
+                  "hidden": "visible"}}
                 primary={props.rtlActive ? prop.rtlName : prop.name}
                 className={classNames(classes.itemText, whiteFontClasses, {
                   [classes.itemTextRTL]: props.rtlActive

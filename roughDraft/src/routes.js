@@ -46,7 +46,7 @@ const dashboardRoutes = [
   },
   {
     path: "/table",
-    name: "Table List",
+    name: "Course Questions",
     rtlName: "قائمة الجدول",
     icon: "content_paste",
     component: TableList,

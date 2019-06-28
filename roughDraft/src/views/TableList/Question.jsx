@@ -64,7 +64,7 @@ class Question extends React.Component {
         
       }
       else{
-      this.setState({attempt: false, output: "INCORRECT", bgColor: "red", id:t});
+      this.setState({attempt: false, output: "INCORRECT", bgColor: "#e34653", id:t});
       }
   }
   render(){
@@ -83,7 +83,7 @@ class Question extends React.Component {
             <div>
               <br/>
             <Button style={{backgroundColor: (this.state.id== t) ?
-            this.state.bgColor: "#00ACC0"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
+            this.state.bgColor: "#c3afc7"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
             <br/>
             </div>)}
             {this.state.output}
