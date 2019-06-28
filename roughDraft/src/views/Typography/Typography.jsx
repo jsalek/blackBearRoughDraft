@@ -57,6 +57,35 @@ function TypographyPage(props) {
   const { classes } = props;
   return (
     <div>
+      <Card>
+      <CardHeader color="primary">
+        <h4 className={classes.cardTitleWhite}>Equitites</h4>
+        <p className={classes.cardCategoryWhite}>
+          Learn about Equities...
+        </p>
+      </CardHeader>
+      <CardBody>
+      
+        <span className="input-group-btn">
+          <Link style={{color:"#00ACC0"}} to={{
+          pathname: '/admin/table',
+          state: {
+            questions: [["1) What are different forms of compensation?", ['a) Base pay, relocation/signing bonus, annual bonus', 'b) Equity compensation', 'c) Financial benefits', 'd) perks', 'e) All of the above']
+            , "e) All of the above"],
+            ["2) What is equity?", ['a) Value of a share of ownership of the business. Company ownership is divided into shares, and those shares entitle owners to various rights. ',
+             'b) Total value of a company’s assets', 'c) Total liabilities of a company'], "a) Value of a share of ownership of the business. Company ownership is divided into shares, and those shares entitle owners to various rights. "],
+            ['3) How does holding shares of a private company differ from a public company?', ['a) There is future financing, aka dilution. Your share of the company will decrease as the company issues more shares.', 'b) There is no difference',
+          'c) The shares traded from a private company are traded on stock exchanges and has more regulations than a public company.'],'a) There is future financing, aka dilution. Your share of the company will decrease as the company issues more shares.'],
+        ["4) What are two common forms of equity compensation?", ['a) annual bonus', 'b) Stock options and restricted stock', 'c) Paid leave'], 'b) Stock options and restricted stock'],
+        ['5) What are stock options?', ['a) a "derivative", a security based on another security',
+      'b) a fixed income instrument, a loan made by an investor to a borrower', 'c) A broad term for shares in a company that have restriction on their ownership'], 'a) a "derivative", a security based on another security']],
+            title: "Equities"
+          }
+        }}>Get Started</Link>
+        </span>
+      </CardBody>
+    </Card>
+
     <Card>
       <CardHeader color="primary">
         <h4 className={classes.cardTitleWhite}>Macroeconomics</h4>
@@ -98,7 +127,7 @@ function TypographyPage(props) {
     </CardBody>
   </Card>
   <Card>
-    
+
     <CardHeader color="primary">
       <h4 className={classes.cardTitleWhite}>Microeconomcis</h4>
       <p className={classes.cardCategoryWhite}>

@@ -147,7 +147,7 @@ function UserProfile(props) {
               </GridContainer>
             </CardBody>
             <CardFooter>
-              <Button color="primary">Update Profile</Button>
+              <Button color="#9c27b0">Update Pofile</Button>
             </CardFooter>
           </Card>
         </GridItem>
@@ -164,7 +164,7 @@ function UserProfile(props) {
               <p className={classes.description}>
                 Ready to learn. Ready to grow.
               </p>
-              <Button color="primary" round>
+              <Button color="#9c27b0" round>
                 Follow
               </Button>
             </CardBody>

@@ -59,7 +59,7 @@ class Question extends React.Component {
     if (t == a && this.state.attempt) {
       this.setState({
         correct: true,
-        bgColor: "green",
+        bgColor: "#bbf2d0",
         id: t,
         output: "CORRECT",
         attempt: false
@@ -69,7 +69,7 @@ class Question extends React.Component {
       this.setState({
         attempt: false,
         output: "INCORRECT",
-        bgColor: "#e34653",
+        bgColor: "#edb2b2",
         id: t
       });
       }
@@ -78,14 +78,9 @@ class Question extends React.Component {
   return (
         <Card>
           <CardHeader color="primary">
-<<<<<<< HEAD
             
             <h4 className={this.props.classes.cardTitleWhite}>{this.props.question[0]}</h4>
-=======
-          <h4 className={this.props.classes.cardTitleWhite}>
-            {this.props.question[0]}
-          </h4>
->>>>>>> bc7c115f233f10facea6f864a4e883c1d6934fc3
+
             {/* <p className={this.props.classes.cardCategoryWhite}>
               {this.props.question}
             </p> */}
@@ -99,7 +94,7 @@ class Question extends React.Component {
               <br/>
               <div style={{display: "inline-block"}}>
             <Button style={{backgroundColor: (this.state.id== t) ?
-            this.state.bgColor: "#c3afc7"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
+            this.state.bgColor: "white"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
             {/* <h4>{this.state.output}</h4> */}
                 <img style={{display: (this.state.id== t && this.state.correct) ?
                 "block": "none"}}
