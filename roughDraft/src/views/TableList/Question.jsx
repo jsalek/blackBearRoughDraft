@@ -14,7 +14,7 @@ import Button from '@material-ui/core/Button';
 import { bgcolor } from "@material-ui/system";
 import imagine2 from "assets/img/check.jpg";
 import imagine3 from "assets/img/x.jpg";
-
+import { Link } from 'react-router-dom';
 const styles = {
   cardCategoryWhite: {
     "&,& a,& a:hover,& a:focus": {

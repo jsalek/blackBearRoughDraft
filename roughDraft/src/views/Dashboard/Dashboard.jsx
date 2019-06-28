@@ -15,11 +15,15 @@ import CardHeader from "components/Card/CardHeader.jsx";
 //import CardIcon from "components/Card/CardIcon.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
-
+import { Link } from 'react-router-dom';
 import { daily, weekly, yearly } from "variables/general.jsx";
-
+import imagine2 from "assets/img/PiggyBank.png";
+import imagine3 from "assets/img/bag.png";
+import imagine4 from "assets/img/medal.png";
+import imagine5 from "assets/img/Cash.png";
+import imagine6 from "assets/img/0.png";
 import {
-  dailySalesChart,
+  dailySalesChart, 
   emailsSubscriptionChart,
   completedTasksChart
 } from "variables/charts.jsx";
@@ -118,8 +122,10 @@ class Dashboard extends React.Component {
               </CardFooter>
             </Card>
           </GridItem>
+          
         </GridContainer>
         <GridContainer>
+          
           <GridItem xs={12} sm={12} md={6}>
             <CustomTabs
               title="Tasks:"
@@ -160,7 +166,22 @@ class Dashboard extends React.Component {
                 }
               ]}
             />
+
+            <Card>
+
+<CardBody>
+
+  <span className="input-group-btn" style={{display: "flex", justifyContent: "space-around"}}>
+    <img src={imagine2} width='50' height='50'alt="Check"></img>
+    <img src={imagine3} width='50' height='50'alt="Check"></img>
+    <img src={imagine4} width='50' height='50'alt="Check"></img>
+    <img src={imagine5} width='50' height='50'alt="Check"></img>
+    <img src={imagine6} width='50' height='50'alt="Check"></img>
+  </span>
+</CardBody>
+</Card>
           </GridItem>
+          
           <GridItem xs={12} sm={12} md={6}>
             <Card>
               <CardHeader color="warning">
@@ -204,7 +225,9 @@ class Dashboard extends React.Component {
                 />
               </CardBody>
             </Card>
+            
           </GridItem>
+          
         </GridContainer>
       </div>
     );
