@@ -37,43 +37,19 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/table",
-    name: "Table List",
-    rtlName: "قائمة الجدول",
-    icon: "content_paste",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
     path: "/typography",
-    name: "Typography",
+    name: "Courses",
     rtlName: "طباعة",
     icon: LibraryBooks,
     component: Typography,
     layout: "/admin"
   },
   {
-    path: "/icons",
-    name: "Icons",
-    rtlName: "الرموز",
-    icon: BubbleChart,
-    component: Icons,
-    layout: "/admin"
-  },
-  {
-    path: "/maps",
-    name: "Maps",
-    rtlName: "خرائط",
-    icon: LocationOn,
-    component: Maps,
-    layout: "/admin"
-  },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    rtlName: "إخطارات",
-    icon: Notifications,
-    component: NotificationsPage,
+    path: "/table",
+    name: "Table List",
+    rtlName: "قائمة الجدول",
+    icon: "content_paste",
+    component: TableList,
     layout: "/admin"
   }
 ];

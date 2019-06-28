@@ -48,17 +48,23 @@ class Question extends React.Component {
     super(props);
     this.state={
       correct: false,
-      bgcolor: "blue",
+      bgColor: "blue",
       id: null,
-      changecol: false
+      attempt: true,
+      outpt: ""
+      
     }
   }
   checkAnswer(t,a){
-      if(t==a){
-        console.log("correct");
+      console.log(this.state.attempt)
+      if(t==a && this.state.attempt){
         
-        this.setState({correct:true, bgcolor:"green", id: t});
+        this.setState({correct:true, bgColor:"green", id: t, output: "CORRECT", attempt:false});
+        this.props.action();
         
+      }
+      else{
+      this.setState({attempt: false, output: "INCORRECT", bgColor: "red", id:t});
       }
   }
   render(){
@@ -66,9 +72,9 @@ class Question extends React.Component {
         <Card>
           <CardHeader color="primary">
             <h4 className={this.props.classes.cardTitleWhite}>{this.props.question[0]}</h4>
-            <p className={this.props.classes.cardCategoryWhite}>
+            {/* <p className={this.props.classes.cardCategoryWhite}>
               {this.props.question}
-            </p>
+            </p> */}
             
           </CardHeader>
           <CardBody>
@@ -76,12 +82,11 @@ class Question extends React.Component {
           .map(t => 
             <div>
               <br/>
-            <Button style={{backgroundColor: (this.state.correct && this.state.id== t) ?
-            "green": "#00ACC0"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
+            <Button style={{backgroundColor: (this.state.id== t) ?
+            this.state.bgColor: "#00ACC0"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
             <br/>
-        
-          
             </div>)}
+            {this.state.output}
           </CardBody>
         </Card>
   );

@@ -12,6 +12,7 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Button from '@material-ui/core/Button';
 import Question from './Question';
+var score=0;
 const styles = {
   cardCategoryWhite: {
     "&,& a,& a:hover,& a:focus": {
@@ -42,28 +43,39 @@ const styles = {
   }
 };
 
-function TableList(props) {
-  const { classes } = props;
-  // const title="Macro Economics Class"
-
-  // const question=["question", ['answer1', 'answer2', 'answer3'], "answer1"]
-  // const questions=[["question", ['answer1', 'answer2', 'answer3'], "answer1"],["question", ['answer1', 'answer2', 'answer3'], "answer2"]]
+class TableList extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      score: 0,
+      
+    }
+    this.addScore=this.addScore.bind(this)
+  }
+  
+  addScore(){
+    this.setState(state=>({
+      score: state.score+1
+    }));
+    console.log(this.state.score)
+}
+render(){
   return (
     <div>
         <Card>
           <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>{props.location.state.title}</h4>
-            <p className={classes.cardCategoryWhite}>
-              Here is a subtitle for this table
-              
+            <h4 className={this.props.classes.cardTitleWhite}>{this.props.location.state.title}</h4>
+            <p className={this.props.classes.cardCategoryWhite}>
+              your score: 
+              {this.state.score}
             </p>
             
           </CardHeader>
           <CardBody>
-          { props.location.state.questions
+          { this.props.location.state.questions
           .map(t => 
             <div>
-              <Question question={t}/>
+              <Question action={this.addScore} question={t}/>
             
             </div>)}
           </CardBody>
@@ -71,9 +83,9 @@ function TableList(props) {
         </div>
   );
 }
-
-TableList.propTypes = {
-  classes: PropTypes.object
-};
+}
+// TableList.propTypes = {
+//   classes: PropTypes.object
+// };
 
 export default withStyles(styles)(TableList);

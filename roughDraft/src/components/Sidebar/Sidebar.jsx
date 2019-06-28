@@ -28,7 +28,7 @@ const Sidebar = ({ ...props }) => {
       {routes.map((prop, key) => {
         var activePro = " ";
         var listItemClasses;
-        if (prop.path === "/upgrade-to-pro") {
+        if (false) {
           activePro = classes.activePro + " ";
           listItemClasses = classNames({
             [" " + classes[color]]: true
@@ -42,6 +42,7 @@ const Sidebar = ({ ...props }) => {
           [" " + classes.whiteFont]: activeRoute(prop.layout + prop.path)
         });
         return (
+          <div>
           <NavLink
             to={prop.layout + prop.path}
             className={activePro + classes.item}
@@ -68,28 +69,30 @@ const Sidebar = ({ ...props }) => {
                 primary={props.rtlActive ? prop.rtlName : prop.name}
                 className={classNames(classes.itemText, whiteFontClasses, {
                   [classes.itemTextRTL]: props.rtlActive
-                })}
+                })} 
                 disableTypography={true}
               />
             </ListItem>
           </NavLink>
+          </div>
         );
       })}
     </List>
+    
   );
   var brand = (
     <div className={classes.logo}>
       <a
-        href="https://www.creative-tim.com?ref=mdr-sidebar"
+        //href="https://www.creative-tim.com?ref=mdr-sidebar"
         className={classNames(classes.logoLink, {
           [classes.logoLinkRTL]: props.rtlActive
         })}
         target="_blank"
       >
-        <div className={classes.logoImage}>
+        {/* <div className={classes.logoImage}>
           <img src={logo} alt="logo" className={classes.img} />
-        </div>
-        {logoText}
+        </div> */}
+        Hackathon Project
       </a>
     </div>
   );
