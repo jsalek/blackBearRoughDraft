@@ -7,7 +7,6 @@ import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
 
-
 const dashboardRoutes = [
   {
     path: "/dashboard",
