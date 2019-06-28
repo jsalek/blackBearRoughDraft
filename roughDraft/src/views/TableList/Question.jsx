@@ -12,6 +12,8 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Button from '@material-ui/core/Button';
 import { bgcolor } from "@material-ui/system";
+import imagine2 from "assets/img/check.jpg";
+import imagine3 from "assets/img/x.jpg";
 
 const styles = {
   cardCategoryWhite: {
@@ -56,10 +58,11 @@ class Question extends React.Component {
   }
   checkAnswer(t,a){
     console.log(this.state.attempt);
-    if (t == a && this.state.attempt) {
+    if (!this.state.attempt){return;}
+    if (t == a) {
       this.setState({
         correct: true,
-        bgColor: "green",
+        bgColor: "#bbf2d0",
         id: t,
         output: "CORRECT",
         attempt: false
@@ -69,7 +72,7 @@ class Question extends React.Component {
       this.setState({
         attempt: false,
         output: "INCORRECT",
-        bgColor: "#e34653",
+        bgColor: "#edb2b2",
         id: t
       });
       }
@@ -81,10 +84,6 @@ class Question extends React.Component {
           <h4 className={this.props.classes.cardTitleWhite}>
             {this.props.question[0]}
           </h4>
-            {/* <p className={this.props.classes.cardCategoryWhite}>
-              {this.props.question}
-            </p> */}
-            
           </CardHeader>
           <CardBody>
         
@@ -93,12 +92,14 @@ class Question extends React.Component {
             <div>
               <br/>
               <div style={{display: "inline-block"}}>
-            <Button style={{backgroundColor: (this.state.id== t) ?
-            this.state.bgColor: "#c3afc7"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
-            {/* <h4>{this.state.output}</h4> */}
-                <img style={{display: (this.state.id== t && this.state.correct) ?
-                "block": "none"}}
-                src="TableList/check.jpg" alt="Check"></img>
+            <Button style={{backgroundColor: (this.state.id== t && !this.state.attempt) ?
+            this.state.bgColor: "white"}} value={t} onClick={() => this.checkAnswer(t, this.props.question[2])}>{t}</Button>
+
+                 <img style={{visibility: (this.state.id== t && this.state.correct) ?
+                "": "hidden"}} src={imagine2} width='10' height='10'alt="Check"></img>
+                 <img style={{visibility: (this.state.id== t && !this.state.correct) ?
+                "": "hidden"}} src={imagine3} width='20' height='20'alt="Check"></img>
+                
             </div>
             <br/>
             </div>)}
