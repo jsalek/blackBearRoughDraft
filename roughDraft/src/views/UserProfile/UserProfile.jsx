@@ -149,7 +149,7 @@ function UserProfile(props) {
             <CardFooter>
               {/* <Button color="#9c27b0">Update Pofile</Button> */}
               <span className="input-group-btn">
-                  <Link style={{color:"#9c27b0"}} to={{
+                  <Link style={{color:"#29baba"}} to={{
                   pathname: '/admin/dashboard',
                   
         }}>Update Profile</Link>

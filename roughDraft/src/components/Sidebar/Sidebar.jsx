@@ -14,7 +14,7 @@ import Icon from "@material-ui/core/Icon";
 // core components
 import AdminNavbarLinks from "components/Navbars/AdminNavbarLinks.jsx";
 //import RTLNavbarLinks from "components/Navbars/RTLNavbarLinks.jsx";
-
+import imagine2 from "assets/img/BlackBearWordLogo2.png";
 import sidebarStyle from "assets/jss/material-dashboard-react/components/sidebarStyle.jsx";
 
 const Sidebar = ({ ...props }) => {
@@ -99,11 +99,11 @@ const Sidebar = ({ ...props }) => {
         {/* <div className={classes.logoImage}>
           <img src={logo} alt="logo" className={classes.img} />
         </div> */}
-        Hackathon Project
+        <img src={imagine2} width='200' alt="Check"></img>
       </a>
     </div>
   );
-  return (
+  return ( 
     <div>
       <Hidden mdUp implementation="css">
         <Drawer
