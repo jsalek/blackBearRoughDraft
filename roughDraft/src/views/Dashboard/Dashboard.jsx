@@ -1,24 +1,9 @@
 import React from "react";
-// nodejs library to set properties for components
 import PropTypes from "prop-types";
-// react plugin for creating charts
 import ChartistGraph from "react-chartist";
-// @material-ui/core
 import withStyles from "@material-ui/core/styles/withStyles";
-//import Icon from "@material-ui/core/Icon";
-// @material-ui/icons
-// import Store from "@material-ui/icons/Store";
-// import Warning from "@material-ui/icons/Warning";
-// import DateRange from "@material-ui/icons/DateRange";
-// import LocalOffer from "@material-ui/icons/LocalOffer";
-// import Update from "@material-ui/icons/Update";
 import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import AccessTime from "@material-ui/icons/AccessTime";
-// import Accessibility from "@material-ui/icons/Accessibility";
-// import BugReport from "@material-ui/icons/BugReport";
-// import Code from "@material-ui/icons/Code";
-// import Cloud from "@material-ui/icons/Cloud";
-// core components
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import Table from "components/Table/Table.jsx";
@@ -209,7 +194,12 @@ class Dashboard extends React.Component {
                       "A stock market device which gives the owner of a put the right, but not the obligation, to sell an asset, at a specified price, by a predetermined date to a given party",
                       "Gives the owner the right, but not an obligation, to buy at a specified date."
                     ],
-                    ["4", "Can I get a return offer?", "Maybe", "Yes"]
+                    [
+                      "4",
+                      "What is Finance?",
+                      "A broad term that describes activities associated with banking, leverage or debt, credit, capital markets, money, and investments.",
+                      "Trading Stocks"
+                    ]
                   ]}
                 />
               </CardBody>
